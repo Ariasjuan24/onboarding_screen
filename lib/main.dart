@@ -47,10 +47,10 @@ class Home extends StatelessWidget {
       title: "campus 2", 
       subtitle: "Podemos encontrar el Depdartamento de Sistemas y Computación en Campus 2", 
       image: AssetImage("assets/images/DptoSistemas.png"), 
-      backgroundColor: Color.fromRGBO(71, 59, 117, 1), 
-      subtitleColor: Colors.yellow, 
-      titleColor: Colors.white,
-      background: LottieBuilder.asset("assets/animation/Animation_Green.json")
+      backgroundColor: Color.fromRGBO(250, 250, 250, 1), 
+      subtitleColor: Color.fromARGB(255, 0, 0, 0), 
+      titleColor: Color.fromARGB(255, 60, 142, 23),
+      background: LottieBuilder.asset("assets/animation/puntos.json")
       ),
   ];
 
