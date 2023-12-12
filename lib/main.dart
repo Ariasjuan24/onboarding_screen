@@ -27,28 +27,30 @@ class Home extends StatelessWidget {
   final data = [
     CardPlanetData(
       title: "Instituto Tecnológico de Celaya", 
-      subtitle: "El Instituto Tecnológico de Celaya es una institución de educación superior localizado en la ciudad de Celaya, Gto. Es dependiente, al igual que varios institutos tecnológicos, orgánica y funcionalmente del Gobierno Federal.", 
+      subtitle: "El Instituto Tecnológico de Celaya es una institución de educación superior localizado en la ciudad de Celaya, Gto.", 
       image: const AssetImage("assets/images/itcelatya.png"), 
       backgroundColor: Color.fromARGB(255, 19, 109, 52),
-      subtitleColor: Colors.pink, 
+      subtitleColor: const Color.fromARGB(255, 255, 255, 255), 
       titleColor: Colors.white,
       background: LottieBuilder.asset("assets/animation/ondas.json"),
       ),
       CardPlanetData(
-      title: "imagine", 
-      subtitle: "aaaaaasklasjakl", 
-      image: AssetImage("assets/images/ingeSistemas.png"), 
-      backgroundColor: Colors.white, 
-      subtitleColor: Colors.purple, 
-      titleColor: Color.fromRGBO(0, 10, 56, 1)
+      title: "Ing. Sistemas Computacionales", 
+      subtitle: "Integra campos de ciencias de la computación para desarrollar hardware y software", 
+      image: AssetImage("assets/images/inggsis2.png"), 
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0), 
+      subtitleColor: const Color.fromARGB(255, 255, 255, 255), 
+      titleColor: Color.fromRGBO(37, 146, 42, 1),
+      background: LottieBuilder.asset("assets/animation/puntos.json"),
       ),
       CardPlanetData(
-      title: "stargaze", 
-      subtitle: "the sky dome is a beautiful...", 
+      title: "campus 2", 
+      subtitle: "Podemos encontrar el Depdartamento de Sistemas y Computación en Campus 2", 
       image: AssetImage("assets/images/DptoSistemas.png"), 
       backgroundColor: Color.fromRGBO(71, 59, 117, 1), 
       subtitleColor: Colors.yellow, 
-      titleColor: Colors.white
+      titleColor: Colors.white,
+      background: LottieBuilder.asset("assets/animation/Animation_Green.json")
       ),
   ];
 
@@ -58,7 +60,7 @@ class Home extends StatelessWidget {
       body: ConcentricPageView(
         colors: data.map((e) => e.backgroundColor).toList(),
         itemBuilder: (int index) {
-          return CardPlanet(data: data[index]);
+          return CardPlanet(data: data[index % data.length]); //Se aplicó el operador de modulo al indice en el acceso a la lista
         },
       ),
     );

@@ -49,8 +49,8 @@ class CardPlanet extends StatelessWidget {
                   flex: 20,
                   child: Image(
                     image: data.image,
-                    height: 100.0, // Ajusta la altura según tus necesidades
-                    width: 100.0, // Ajusta el ancho según tus necesidades
+                    height: 400.0,
+                    width: 400.0, 
                   ),
                 ),
                 const Spacer(flex: 1),
